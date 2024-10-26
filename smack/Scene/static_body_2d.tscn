@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://1bjt8681atlc"]
+
+[ext_resource type="Texture2D" uid="uid://c6dhe6flw02gq" path="res://spiky-removebg-preview.png" id="1_2hdy6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_alf73"]
+size = Vector2(104, 42.5)
+
+[node name="spiky PH" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(65.5, 66.25)
+scale = Vector2(0.447826, 0.40411)
+texture = ExtResource("1_2hdy6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(64, 40.25)
+shape = SubResource("RectangleShape2D_alf73")
