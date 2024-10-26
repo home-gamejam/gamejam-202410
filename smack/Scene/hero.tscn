@@ -1,5 +1,6 @@
-[gd_scene load_steps=5 format=3 uid="uid://urbakhvascpy"]
+[gd_scene load_steps=6 format=3 uid="uid://urbakhvascpy"]
 
+[ext_resource type="Script" path="res://Scene/hero.gd" id="1_3u3i6"]
 [ext_resource type="Texture2D" uid="uid://dvdnrj8unjfrt" path="res://icon.svg" id="1_se02j"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cll7j"]
@@ -21,6 +22,7 @@ animations = [{
 size = Vector2(128, 128)
 
 [node name="hero" type="CharacterBody2D"]
+script = ExtResource("1_3u3i6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-5, 8)
