@@ -1,0 +1,49 @@
+[gd_scene load_steps=3 format=3 uid="uid://owsooxhctlhm"]
+
+[ext_resource type="Script" path="res://intro_scene.gd" id="1_hg88l"]
+
+[sub_resource type="Curve2D" id="Curve2D_gouxv"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 300, 171, 0, 0, 0, 0, 300, 1000)
+}
+point_count = 2
+
+[node name="IntroScene" type="Node2D"]
+script = ExtResource("1_hg88l")
+
+[node name="background" type="StaticBody2D" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="background"]
+offset_right = 600.0
+offset_bottom = 300.0
+color = Color(0.493603, 0.28137, 0.048827, 1)
+
+[node name="ColorRect2" type="ColorRect" parent="background"]
+offset_top = 300.0
+offset_right = 600.0
+offset_bottom = 600.0
+color = Color(0.611732, 0.353977, 0.0719837, 1)
+
+[node name="ColorRect3" type="ColorRect" parent="background"]
+offset_top = 600.0
+offset_right = 600.0
+offset_bottom = 900.0
+color = Color(0.748341, 0.439566, 0.10582, 1)
+
+[node name="ColorRect4" type="ColorRect" parent="background"]
+offset_top = 900.0
+offset_right = 600.0
+offset_bottom = 1200.0
+color = Color(0.82012, 0.487257, 0.134382, 1)
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_gouxv")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(300, 171)
+rotation = 1.5708
+
+[node name="Camera2D" type="Camera2D" parent="Path2D/PathFollow2D"]
+position = Vector2(-1, 0)
+rotation = -1.5708
+zoom = Vector2(2, 2)

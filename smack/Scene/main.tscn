@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://bnp622jgb372v"]
+[gd_scene load_steps=4 format=3 uid="uid://bnp622jgb372v"]
 
 [ext_resource type="PackedScene" uid="uid://urbakhvascpy" path="res://Scene/hero.tscn" id="1_xifyf"]
-[ext_resource type="PackedScene" uid="uid://cdkg1ai1i6olv" path="res://Scene/wall.tscn" id="2_tfdd4"]
+[ext_resource type="PackedScene" uid="uid://dnov45ew4prga" path="res://Scene/wall.tscn" id="2_tfdd4"]
+[ext_resource type="Script" path="res://Scene/color_rect.gd" id="3_0nv50"]
 
 [node name="Main" type="Node2D"]
 position = Vector2(789.5, 672.5)
@@ -20,14 +21,38 @@ scale = Vector2(0.448123, 2.70718)
 position = Vector2(5007.91, 21.0762)
 scale = Vector2(1, 1.02871)
 
+[node name="ColorRect" type="ColorRect" parent="world boundry/wall_R"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_0nv50")
+
 [node name="wall_UP2" parent="world boundry" instance=ExtResource("2_tfdd4")]
 position = Vector2(468.6, 591.524)
 rotation = -1.52467
 scale = Vector2(0.207641, 7.8542)
 skew = -0.0441539
 
+[node name="ColorRect" type="ColorRect" parent="world boundry/wall_UP2"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_0nv50")
+
 [node name="wall_UP" parent="world boundry" instance=ExtResource("2_tfdd4")]
 position = Vector2(-306.67, -59.4719)
 rotation = 1.55183
 scale = Vector2(0.0863141, -13.0188)
 skew = 0.0212187
+
+[node name="ColorRect" type="ColorRect" parent="world boundry/wall_UP"]
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_0nv50")
